@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DNN_music"
+version = "0.1.0"
+authors = [{name = "Bruno Cataño Arellano", email = "arellanobruno23@gmail.com"}, {name = "Andrey Camilo Ruiz Perez", email = "acruizp@unal.edu.co"}, 
+{name = "Lucia Castellanos Castillo", email = "luccastellanos@unal.edu.co "}]
+description = "Redes neuronales para clasificación de géneros musicales"
+requires-python = ">3.8"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pathlib"
+]
+
+[tool.setuptools.packages.find]
+where = ["src/"]
