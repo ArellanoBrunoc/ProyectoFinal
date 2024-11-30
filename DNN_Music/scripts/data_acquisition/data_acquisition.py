@@ -46,5 +46,7 @@ def load_data_set(path):
         print("Archivo no encontrado:", csv_path)
 
 
-df, descriptions = load_data_set(csv_path)
 
+
+if __name__ == "__main__":
+    df, descriptions = load_data_set(csv_path)

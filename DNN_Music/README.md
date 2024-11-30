@@ -16,3 +16,4 @@ Este repositorio sigue una estructura organizada en carpetas, diseñada para fac
 * `docs`: en esta carpeta se encuentran las plantillas de los documentos definidos en la metodología.
 * `scripts`: esta carpeta debe contener los scripts/notebooks que se ejecutarán.
 * `pyproject.toml`: archivo de definición del proyecto en Python.
+* `DNN_Music.ipynb`: Notebook madre en el que se ejecuta el proyecto.
