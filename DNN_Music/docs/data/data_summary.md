@@ -1,27 +1,41 @@
 # Reporte de Datos
 
-Este documento contiene los resultados del análisis exploratorio de datos.
-
 ## Resumen general de los datos
 
-En esta sección se presenta un resumen general de los datos. Se describe el número total de observaciones, variables, el tipo de variables, la presencia de valores faltantes y la distribución de las variables.
+Para entender el dataset que vamos a utilizar, es importante tener en cuenta que los archivos de audio originales son fragmentos de 30 segundos de una canción de un género específico. Cada fragmento se divide en 10 partes de 3 segundos que contienen características calculadas de la canción, tales como la caída espectral, característica cromática y la tasa de cruces por 0 entre otros. Esta división es relevante para nuestro proyecto debido a que se capturan más variaciones temporales y matices dentro del fragmento, lo cual es beneficioso para tareas de clasificación.
+
+De esta manera, obtenemos un conjunto de datos que cuenta con un total de 9990 documentos.
+
 
 ## Resumen de calidad de los datos
 
-En esta sección se presenta un resumen de la calidad de los datos. Se describe la cantidad y porcentaje de valores faltantes, valores extremos, errores y duplicados. También se muestran las acciones tomadas para abordar estos problemas.
+Los tipos de datos más comunes en el dataframe son:
+
+- float64 = 57 muestras
+- object = 2 muestras
+- int64 = 1 muestra
+
+Del mismo modo, observamos que la calidad de nuestros datos es bastante alta pues obtenemos una confianza del 100% de que la información está bajo el encoding: ascii. Esto nos garantiza que no tendremos problemas de codificación.
 
 ## Variable objetivo
 
-En esta sección se describe la variable objetivo. Se muestra la distribución de la variable y se presentan gráficos que permiten entender mejor su comportamiento.
+Para nuestro proyecto tenemos como meta una variable categórica, pues buscamos clasificar los fragmentos de las canciones por género, más específicamente 10.
 
-## Variables individuales
+[Blues, Classical, Country, Disco, Hiphop, Jazz, Metal, Pop, Reggae, Rock]
 
-En esta sección se presenta un análisis detallado de cada variable individual. Se muestran estadísticas descriptivas, gráficos de distribución y de relación con la variable objetivo (si aplica). Además, se describen posibles transformaciones que se pueden aplicar a la variable.
+Asimismo, observamos que no existe desbalanceo de datos
 
-## Ranking de variables
+![Datos](graficos/Barras.png)
 
-En esta sección se presenta un ranking de las variables más importantes para predecir la variable objetivo. Se utilizan técnicas como la correlación, el análisis de componentes principales (PCA) o la importancia de las variables en un modelo de aprendizaje automático.
+## Relación entre variables
 
-## Relación entre variables explicativas y variable objetivo
+Para la correcta visualización de nuestras variables, vamos a separar las características en 4 grupos. 2 grupos principales (varianza y media) que guardan las características de corte espectral, centroide espectral, armonía, tasa de cruce por cero, entre otros; pues estos nos permiten detectar la presencia de ruido o sonidos agudos, analizar la disonancia y tonalidad, identificar que tan grave es un sonido, entre otros.
 
-En esta sección se presenta un análisis de la relación entre las variables explicativas y la variable objetivo. Se utilizan gráficos como la matriz de correlación y el diagrama de dispersión para entender mejor la relación entre las variables. Además, se pueden utilizar técnicas como la regresión lineal para modelar la relación entre las variables.
+Y otros 2 grupos que únicamente contiene MFCCs (Coeficientes Cepstrales en Frecuencia Melódica) pues cada uno representa una "banda" diferente de frecuencias que permiten distinguir mejor los matices del audio.
+
+Podemos observar que tanto para los valores de la media y varianza, las variables de centroide espectral, el ancho de banda espectral y pérdida gradual están altamente correlacionadas entre ellas. Por otro lado, cuando observamos los coeficientes cepstrales notamos que la correlación de sus valores de media o son medianamente elevados o no tienen relación alguna, mientras que para el caso de la varianza la correlación tiende a ser mucho más moderada entre todas. 
+
+![Datos](graficos/Matriz1.png)
+![Datos](graficos/Matriz2.png)
+![Datos](graficos/Matriz3.png)
+![Datos](graficos/Matriz4.png)
