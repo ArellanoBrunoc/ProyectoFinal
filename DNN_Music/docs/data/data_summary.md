@@ -39,3 +39,8 @@ Podemos observar que tanto para los valores de la media y varianza, las variable
 ![Datos](graficos/Matriz2.png)
 ![Datos](graficos/Matriz3.png)
 ![Datos](graficos/Matriz4.png)
+
+## Conclusiones
+Como podemos observar en las matrices de los MFCCs, las varianzas de los MFCCs muestran correlaciones más débiles entre sí (menores a 0.6 en su mayoría) en comparación con las medias, lo que indica que podrían capturar aspectos más diversos del espectro musical. Esto es útil en la clasificación, ya que permite que nuestro modelo capte patrones más específicos para diferenciar géneros. Asimismo, los coeficientes como mfcc5 y mfcc6 presentan relaciones similares en ambas matrices, lo que puede ser un punto clave para géneros que se diferencian más por textura que por ritmo (metal vs rock).
+ 
+Por otro lado, las características harmony y perceptr tienen correlaciones bajas en ambas matrices, aunque en la matriz de varianzas se destacan algunas correlaciones positivas, esto sugiere que estas podrían aportar información más independiente del género de una canción, y aportarían más a la distinción entre armonías más complejas (jazz vs clasica). Por el contrario, los atributos espectrales como spectral_centroid, spectral_bandwidth y rolloff están más fuertemente relacionados entre ellos, y podría implicar que representan aspectos similares del contenido armónico de las canciones

@@ -1,15 +1,25 @@
 import pandas as pd
 import os
 import pathlib
+import requests
+from io import StringIO
 
-# Verificar ruta actual
-print(f"Ruta actual: {os.getcwd()}")
 
-csv_path = pathlib.Path(__file__).resolve().parents[3] / 'DNN_Music' / 'docs' / 'data' / 'musicdataset.csv'
 
-def load_data_set(path):
-    if csv_path.exists():
-        df = pd.read_csv(filepath_or_buffer=csv_path)
+# URL de descarga directa
+file_id = "1tX-fyFqHZ_28zdGB0Inx4VtZFyjup_1Y" 
+download_url = f"https://drive.google.com/uc?id={file_id}"
+
+
+def load_data_set():
+    response = requests.get(download_url)
+    if  response.status_code == 200:
+        # Lee el contenido del CSV en memoria
+        csv_content = StringIO(response.text)
+
+        df = pd.read_csv(csv_content)
+
+
         df_dict = df.drop(columns=['filename', 'length'], errors='ignore')
         columns = df_dict.columns
         descriptions = {col: "Descripción no disponible aún" for col in columns}
@@ -43,10 +53,10 @@ def load_data_set(path):
 
         return df, descriptions
     else:
-        print("Archivo no encontrado:", csv_path)
+        print("Archivo no encontrado:")
 
 
 
 
 if __name__ == "__main__":
-    df, descriptions = load_data_set(csv_path)
+    df, descriptions = load_data_set()

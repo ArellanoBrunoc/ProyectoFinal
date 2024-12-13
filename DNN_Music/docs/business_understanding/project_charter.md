@@ -20,10 +20,16 @@ El éxito del proyecto se medirá por la confiabilidad del modelo al categorizar
 
 
 ## Metodología
-
 Para llevar a cabo este proyecto, se utilizará un conjunto de datos extraído de la plataforma Kaggle, que contiene fragmentos de audio pertenecientes a diversos géneros musicales. En primer lugar, se realizará una limpieza y preprocesamiento de los datos, seguido de un análisis exploratorio para identificar patrones relevantes.
 
 El entrenamiento del modelo se llevará a cabo utilizando redes neuronales densas, empleando herramientas como TensorFlow, Keras y Scikit-learn para el desarrollo, ajuste y evaluación del modelo. La metodología asegurará la implementación de mejores prácticas en aprendizaje profundo y procesamiento de audio, garantizando la solidez y confiabilidad de los resultados.
+
+Para este proyecto, no se considerará necesario el uso de versionamiento de datos (DVC), dado que los datos no cambian a lo largo del desarrollo y no requieren un control de versiones detallado.
+
+## Contexto Adicional
+En 2002, G. Tzanetakis y P. Cook presentaron su conocido artículo sobre clasificación de géneros musicales, titulado "Musical genre classification of audio signals", publicado en IEEE Transactions on Audio and Speech Processing.
+
+Para la clasificación de géneros musicales en este proyecto, se utilizará el GTZAN Genre Dataset, que representa un total de 1000 pistas de audio con una duración de 30 segundos. Este conjunto de datos está dividido en 10 géneros, cada uno con 100 pistas. Todas las pistas están en formato de archivo .wav, con una frecuencia de muestreo de 22050Hz, en mono y 16 bits. Este dataset es ampliamente utilizado en investigaciones de clasificación de géneros musicales y sirve como base para entrenar y evaluar el modelo de redes neuronales en este proyecto.
 
 ## Cronograma
 
