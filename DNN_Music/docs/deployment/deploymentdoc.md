@@ -42,7 +42,11 @@
     git clone https://huggingface.co/spaces/GithubUser/SpaceName
     ```
     * Commit y pushear todos los archivos (esto pedira un Token de autenticacion de HugginFace con permisos de escritura)
-
+    ```bash
+    git add .
+    git commit -m "Add application file"
+    git push
+    ```
 - **Instrucciones de configuración:** No requiere mayores configuraciones
 - **Instrucciones de uso:** 
     * Copiar los datos de entrada deseados en el orden establecido y pegarlos en la interfaz y usar "submit" para obtener una prediccion.
