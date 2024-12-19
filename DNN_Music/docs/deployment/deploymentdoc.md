@@ -12,22 +12,22 @@
     - keras (para cargar el modelo DNN)
     - numpy (para manejar datos de entrada)
     - joblib
-
-    - Hardware: Proporcionado por la nube
-    
-    * Dependencias adicionales:
     - tensorflow.
 
+- **Hardware:** 
+    *Proporcionado por la nube
+    
 - **Requisitos de seguridad:** 
     * Autenticación: La plataforma de Hugging Face requiere autenticación para crear espacios. Se debe generar un token de autenticación desde Hugging Face.
     * Encriptación de datos: La encriptación se maneja automáticamente durante el transporte en Hugging Face.
-- **Diagrama de arquitectura:**:
+- **Diagrama de arquitectura:**
 
 
 
 
 ## Código de despliegue
 
+- [**Link del despliegue**](https://huggingface.co/spaces/ArellanoBrunoC/DNN_Music)
 - **Archivo principal:** App_deploy/app.py
 - **Rutas de acceso a los archivos:**
 
