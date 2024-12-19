@@ -11,9 +11,8 @@
     - keras (para cargar el modelo DNN)
     - numpy (para manejar datos de entrada)
     - joblib
-    Hardware:
-    Proporcionado por la nube
-    Dependencias adicionales:
+    - *Hardware:* Proporcionado por la nube
+    * Dependencias adicionales:
     - tensorflow.
 - **Requisitos de seguridad:** 
     * Autenticación: La plataforma de Hugging Face requiere autenticación para crear espacios. Se debe generar un token de autenticación desde Hugging Face.
@@ -35,7 +34,7 @@
 ## Documentación del despliegue
 
 - **Instrucciones de instalación:** 
-    * Crear cuenta en HugginFace [text](https://huggingface.co)
+    * [Crear cuenta en HugginFace](https://huggingface.co)
     * Crear un espacio nuevo en Gradio como inmterfaz
     * crear una carpeta local con los archivos necesarios y generar un clon:
     ```bash
@@ -44,11 +43,19 @@
     * Commit y pushear todos los archivos (esto pedira un Token de autenticacion de HugginFace con permisos de escritura)
     ```bash
     git add .
-    git commit -m "Add application file"
+    git commit -m "Add application files"
     git push
     ```
 - **Instrucciones de configuración:** No requiere mayores configuraciones
 - **Instrucciones de uso:** 
     * Copiar los datos de entrada deseados en el orden establecido y pegarlos en la interfaz y usar "submit" para obtener una prediccion.
-    * Importar Client de Gradio, para hacer llamadas por API
+    * Importar Client de gradio_client, para hacer llamadas por API:
+        ```python
+        from gradio_client import Client
+        client = Client("HuggingFaceUser/SpaceName")
+        result = client.predict(
+		features="Aqui van los datos de entrada separados por comas"
+        )
+        print(result)
+        ```
 - **Instrucciones de mantenimiento:** No requiere mantenimiento
