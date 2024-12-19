@@ -21,7 +21,7 @@
     * Autenticación: La plataforma de Hugging Face requiere autenticación para crear espacios. Se debe generar un token de autenticación desde Hugging Face.
     * Encriptación de datos: La encriptación se maneja automáticamente durante el transporte en Hugging Face.
 - **Diagrama de arquitectura:**
-    !Diagrama[diagrama.png]
+    ![Diagrama](diagrama.png)
 
 
 
