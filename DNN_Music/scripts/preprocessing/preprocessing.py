@@ -35,4 +35,4 @@ def clean_df(df, seed=42):
     X_dev = pd.DataFrame(scaler.transform(X_dev), columns=X_train.columns)
     X_test = pd.DataFrame(scaler.transform(X_test), columns=X_train.columns)
     
-    return X_train, X_dev, X_test, y_train, y_dev, y_test, df_clean
+    return X_train, X_dev, X_test, y_train, y_dev, y_test, df_clean, scaler
