@@ -6,14 +6,18 @@
 - **Plataforma de despliegue:** Hugging Face Spaces
 - **Requisitos técnicos:**:
     * Python 3.8+
+
     Bibliotecas de terceros:
     - gradio (para la interfaz de usuario)
     - keras (para cargar el modelo DNN)
     - numpy (para manejar datos de entrada)
     - joblib
-    - *Hardware:* Proporcionado por la nube
+
+    - Hardware: Proporcionado por la nube
+    
     * Dependencias adicionales:
     - tensorflow.
+
 - **Requisitos de seguridad:** 
     * Autenticación: La plataforma de Hugging Face requiere autenticación para crear espacios. Se debe generar un token de autenticación desde Hugging Face.
     * Encriptación de datos: La encriptación se maneja automáticamente durante el transporte en Hugging Face.
@@ -25,17 +29,18 @@
 ## Código de despliegue
 
 - **Archivo principal:** App_deploy/app.py
-- **Rutas de acceso a los archivos:**:
-    *App_deploy/app.py
-    *App_deploy/DNN_v1.h5
-    *App_deploy/scaler.pkl
+- **Rutas de acceso a los archivos:**
+
+    * App_deploy/app.py
+    * App_deploy/DNN_v1.h5
+    * App_deploy/scaler.pkl
 - **Variables de entorno:** Ninguna
 
 ## Documentación del despliegue
 
 - **Instrucciones de instalación:** 
     * [Crear cuenta en HugginFace](https://huggingface.co)
-    * Crear un espacio nuevo en Gradio como inmterfaz
+    * Crear un espacio nuevo en Gradio como interfaz
     * crear una carpeta local con los archivos necesarios y generar un clon:
     ```bash
     git clone https://huggingface.co/spaces/GithubUser/SpaceName
